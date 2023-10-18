@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+#fetchDataML, #fetchDataTL, #fetchDataNL {
+    /*background-color: #ebebeb;
+    color: #1d1d1d;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;*/
+}
+
+#fetchDataML:hover, #fetchDataTL:hover, #fetchDataNL:hover {
+    /*background-color: #007bff;
+    color: #ffffff;*/
+}
+/*
+#fetchDataML:focus, #fetchDataTL:focus, #fetchDataNL:focus {
+    background-color: #007bff;
+    color: #ffffff;
+}
+*/
+
+#missingNumbers {
+    margin-top: 20px;
+}
+
+.selected {
+    background-color: #007bff !important;
+    color: #ffffff !important;
+}
+
+.opt-button {
+    background-color: #ebebeb;
+    color: #1d1d1d;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.opt-button:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}

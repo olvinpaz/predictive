@@ -3,6 +3,10 @@ body {
     text-align: center;
 }
 
+#content {
+    margin-bottom: 100px; /* Espacio para el botón en la parte inferior */
+}
+
 h1 {
     color: #333;
 }
@@ -18,16 +22,6 @@ h1 {
     transition: background-color 0.3s, color 0.3s;*/
 }
 
-#fetchDataML:hover, #fetchDataTL:hover, #fetchDataNL:hover {
-    /*background-color: #007bff;
-    color: #ffffff;*/
-}
-/*
-#fetchDataML:focus, #fetchDataTL:focus, #fetchDataNL:focus {
-    background-color: #007bff;
-    color: #ffffff;
-}
-*/
 
 #missingNumbers {
     margin-top: 20px;
@@ -42,6 +36,7 @@ h1 {
     background-color: #ebebeb;
     color: #1d1d1d;
     padding: 10px 20px;
+    margin-right: 5px;
     border: none;
     cursor: pointer;
     border-radius: 4px;
@@ -52,4 +47,71 @@ h1 {
 .opt-button:hover {
     background-color: #007bff;
     color: #ffffff;
+}
+
+
+
+
+#repeatedNumbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: 20px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*justify-content: space-around;  Otra opción: space-around */
+    background-color: rgb(255, 255, 255);
+    height: 76px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Estilo normal del botón */
+button.nav-button {
+    background-color: #ebebeb;
+    color: #afafaf;
+    border: none;
+    cursor: pointer;
+
+    padding: 0;
+    height: 56px;
+    width: 56px;
+    margin-right: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo del botón cuando el mouse está encima (hover) */
+button.nav-button:hover {
+    color: #3b3b3b; /* Cambia el color de texto a rojo al pasar el mouse por encima del botón */
+}
+
+/* Estilos para el hipervínculo dentro del botón */
+button.nav-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: inherit; /* Hereda el color del texto del botón */
+    height: 100%;
+    width: 100%;
+    /*line-height: 60px;*/
+    border-radius: 50%;
+}
+
+button.nav-button a span {
+    background-color: transparent;
+}
+
+/* Estilos para el hipervínculo cuando el mouse está encima (hover) */
+button.nav-button xa:hover {
+    text-decoration: underline; /* Subraya el hipervínculo al pasar el mouse por encima */
 }

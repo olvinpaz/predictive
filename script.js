@@ -4,6 +4,13 @@ const btnFetchDataML = document.getElementById('fetchDataML');
 const btnFetchDataTL = document.getElementById('fetchDataTL');
 const btnFetchDataNL = document.getElementById('fetchDataNL');
 
+window.addEventListener('load', function () {
+    // Cuando el documento se carga completamente, se ejecutará este código.
+    btnHome.classList.add("selected");
+    btnRepeatedNumbers.classList.remove("selected");
+    btnSelectedNumbers.classList.remove("selected");
+});
+
 // Agrega un evento click a los botones - Fetch Data
 // Llama a la función processMissingNumbers con los datos JSON obtenidos
 btnFetchDataML.addEventListener('click', function () {
@@ -20,7 +27,6 @@ btnFetchDataTL.addEventListener('click', function () {
     btnFetchDataTL.classList.add("selected");
     btnFetchDataML.classList.remove("selected");
     btnFetchDataNL.classList.remove("selected");
-
 });
 
 btnFetchDataNL.addEventListener('click', function () {

@@ -38,9 +38,6 @@ h1 {
     color: #ffffff;
 }
 
-
-
-
 #repeatedNumbers {
     display: flex;
     flex-wrap: wrap;
@@ -91,18 +88,20 @@ button.nav-button a {
     color: inherit; /* Hereda el color del texto del botón */
     height: 100%;
     width: 100%;
-    /*line-height: 60px;*/
     border-radius: 50%;
 }
 
-button.nav-button a span {
-    background-color: transparent;
-}
-
-button.nav-button a{
+button.nav-button a,
+button.nav-button a span{
     user-select: none;
 }
 
-button, .nav-button a span{
-    user-select: none;
+button:focus{
+    outline: none;
+}
+
+/* Eliminar los efectos táctiles predeterminados */
+button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }

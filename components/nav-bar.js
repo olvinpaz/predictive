@@ -32,23 +32,3 @@ window.addEventListener('load', function () {
         btnSelectedNumbers.classList.add("selected");
     }
 });
-
-/*
-btnHome.addEventListener('click', function () {
-    btnHome.classList.add("selected");
-    btnRepeatedNumbers.classList.remove("selected");
-    btnSelectedNumbers.classList.remove("selected");
-});
-
-btnRepeatedNumbers.addEventListener('click', function () {
-    btnRepeatedNumbers.classList.add("selected");
-    btnHome.classList.remove("selected");
-    btnSelectedNumbers.classList.remove("selected");
-});
-
-btnSelectedNumbers.addEventListener('click', function () {
-    btnSelectedNumbers.classList.add("selected");
-    btnHome.classList.remove("selected");
-    btnRepeatedNumbers.classList.remove("selected");
-});
-*/

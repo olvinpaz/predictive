@@ -93,5 +93,3 @@ function processMissingNumbers(col) {
             console.error(error);
         });
 }
-
-//https://docs.google.com/spreadsheets/d/1HsyO8Jt7s3zegg7p47T-6YI80zC3m38zs5IV7CjzaWM/edit?usp=sharing

@@ -98,3 +98,11 @@ button.nav-button a {
 button.nav-button a span {
     background-color: transparent;
 }
+
+button.nav-button a{
+    user-select: none;
+}
+
+button, .nav-button a span{
+    user-select: none;
+}

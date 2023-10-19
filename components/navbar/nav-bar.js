@@ -16,16 +16,16 @@ window.addEventListener('load', function () {
         btnSelectedNumbers.classList.remove("selected");
     }
 
-    if (window.location.href.includes("repeat.html")) {
-        console.log("Estás en la página 'repeat.html'");
+    if (window.location.href.includes("repeated/numbers.html")) {
+        console.log("Estás en la página 'numbers.html'");
 
         btnHome.classList.remove("selected");
         btnRepeatedNumbers.classList.add("selected");
         btnSelectedNumbers.classList.remove("selected");
     }
 
-    if (window.location.href.includes("selected-numbers.html")) {
-        console.log("Estás en la página 'elected-numbers.html'");
+    if (window.location.href.includes("selected/numbers.html")) {
+        console.log("Estás en la página 'selected/numbers.html'");
 
         btnHome.classList.remove("selected");
         btnRepeatedNumbers.classList.remove("selected");

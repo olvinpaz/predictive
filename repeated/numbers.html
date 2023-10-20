@@ -9,8 +9,20 @@
 </head>
 <body>
     <div id="content">
-        <h1>Repeated Numbers</h1>
-        <div id="repeatedNumbers"></div>        
+        <h2>Repeated Numbers</h2>
+        <h3>Seleccione una opcion</h3>
+        <button id="buttonML" data-value="2" class="opt-button">M</button>
+        <button id="buttonTL" data-value="3" class="opt-button">T</button>
+        <button id="buttonNL" data-value="4" class="opt-button">N</button>
+
+        <div class="date-picker-container">
+            <label for="datePicker">Desde la fecha:</label>
+            <input type="date" id="datePicker"> 
+        </div>
+        
+        <div id="repeatedNumbers">
+            <div id="gridContainer"></div>
+        </div>
     </div>
 
 
@@ -26,7 +38,8 @@
         </button>
     </div>
 
-    <script src="../js/script.js"></script>
+    <script src="repeated.js"></script>
+    <!--<script src="../js/script.js"></script>-->
     <script src="../components//navbar/nav-bar.js"></script>
 </body>
 </html>

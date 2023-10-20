@@ -105,3 +105,58 @@ button {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
 }
+
+
+
+
+.date-picker-container label{
+    display: block;
+    margin: 10px;
+}
+
+.date-picker-container input{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* Repeated Page */
+
+/* Estilos para la cuadrícula */
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gridItem {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    width: 40px;
+    font-weight: 600;
+}
+
+/* Estilos para el indicador de mensajes no leídos */
+.unread {
+    position: relative;
+}
+
+.unread::after {
+    content: attr(data-unread-count);
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: rgb(236, 72, 72);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    /*width: 12px;
+    height: 19px;
+    line-height: 19px;*/
+    padding: 2px 6px;
+}

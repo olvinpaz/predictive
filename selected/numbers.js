@@ -1,21 +1,21 @@
 const googleSheetsUrl = "https://docs.google.com/spreadsheets/d/1HsyO8Jt7s3zegg7p47T-6YI80zC3m38zs5IV7CjzaWM/gviz/tq?tqx=out:json&gid=1712153455"; //"URL_GENERADA_POR_GOOGLE_SHEETS"
 
-
 window.addEventListener('load', function () {
-    const mlRepeatButton = document.getElementById('mlRepeatButton');
-    const alRepeatButton = document.getElementById('alRepeatButton');
-    const nlRepeatButton = document.getElementById('nlRepeatButton');
+    const mlButton = document.getElementById('mlButton');
+    const alButton = document.getElementById('alButton');
+    const nlButton = document.getElementById('nlButton');
 
-    mlRepeatButton.classList.add("selected");
-    alRepeatButton.classList.remove("selected");
-    nlRepeatButton.classList.remove("selected");
-    
+    // Cuando el documento se carga completamente, se ejecutará este código.
+    mlButton.classList.add("selected");
+    alButton.classList.remove("selected");
+    nlButton.classList.remove("selected");
+
     // Añade la propiedad data-value="" pare definir el index de cada columna en la que se buscaran los datos de la fuente.
     // Column Index: "2" for Column ML, "3" for Column AL, "4" for Column NL from data src.
     const colindex = "coli-" // prefijo para comprender el valor, este se elimina cuando cuando se pasa el parametro "culumnIndex" a la funcion que realiza el proceso de la informacion.
-    mlRepeatButton.setAttribute("data-value", colindex+"2");
-    alRepeatButton.setAttribute("data-value", colindex+"3");
-    nlRepeatButton.setAttribute("data-value", colindex+"4");
+    mlButton.setAttribute("data-value", colindex+"2");
+    alButton.setAttribute("data-value", colindex+"3");
+    nlButton.setAttribute("data-value", colindex+"4");
 
     const selectedDate = datePicker.value;
     const selectedButton = document.querySelector('button.opt-button.selected');
@@ -25,8 +25,6 @@ window.addEventListener('load', function () {
         fetchDataAndDisplay(columnIndex, selectedDate);
     }
 });
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
     const datePicker = document.getElementById('datePicker');
@@ -57,13 +55,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Obten el nodo por su ID
-    const repeatControlButtonsNode = document.getElementById("repeatControlButtons");
+    const optionButtonsNode = document.getElementById("repeatControlButtons");
 
     // Selecciona todos los botones dentro del nodo
-    const repeatButtonsChildren = repeatControlButtonsNode.querySelectorAll("button");
+    const optionButtonsChildren = optionButtonsNode.querySelectorAll("button");
 
     // Agrega un evento de clic a los botones
-    repeatButtonsChildren.forEach(function (button) {
+    optionButtonsChildren.forEach(function (button) {
         button.addEventListener('click', function () {
             const selectedDate = datePicker.value;
             const buttonValue = button.getAttribute('data-value');
@@ -73,9 +71,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Agrega un estilo para resaltar el botón seleccionado
-    repeatButtonsChildren.forEach(function (button) {
+    optionButtonsChildren.forEach(function (button) {
         button.addEventListener('click', function () {
-            repeatButtonsChildren.forEach(function (btn) {
+            optionButtonsChildren.forEach(function (btn) {
                 btn.classList.remove('selected');
             });
             button.classList.add('selected');
@@ -136,16 +134,16 @@ function fetchDataAndDisplay(columnIndex, selectedDate) {
 
             const totalNumbers = document.getElementById('totalNumbers');
             let count = 0;
-
+            
             for (const number in repeatedNumbers) {
-                if (repeatedNumbers[number] >= 2) {
+                if (repeatedNumbers[number] > 0 && repeatedNumbers[number] <= 1) {
                     const gridItem = document.createElement('div');
 
                     // Total numbers
                     count++;
-                  
+
                     gridItem.classList.add('gridItem', 'unread');
-                    gridItem.innerHTML = number < 10 ? `0${number}` : number.toString(); //number;//gridItem.innerHTML = `${number} (${repeatedNumbers[number]})`;
+                    gridItem.innerHTML = number < 10 ? `0${number}` : number.toString();
                     gridItem.setAttribute('data-unread-count', repeatedNumbers[number]);
                     gridContainer.appendChild(gridItem);
                 }
@@ -153,7 +151,7 @@ function fetchDataAndDisplay(columnIndex, selectedDate) {
 
             // Total numeros
             totalNumbers.innerHTML = "Total: "+ count ;
-            
+
         } else {
             console.log('Índice de inicio no válido.');
         }

@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selected Numbers</title>
+    <title>Predictive</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <div id="content">
-        <h1>Selected Numbers</h1>
-        <div id="selectedNumbers"></div>        
+        <h2>Jugados</h2>
+        <h3>Seleccione una opcion</h3>
+        <div id="repeatControlButtons">
+            <button id="mlButton" data-value="" class="opt-button">M</button>
+            <button id="alButton" data-value="" class="opt-button">T</button>
+            <button id="nlButton" data-value="" class="opt-button">N</button>            
+        </div>
+
+        <div class="date-picker-container">
+            <label for="datePicker">Desde la fecha:</label>
+            <input type="date" id="datePicker"> 
+        </div>
+
+        <div id="totalNumbers">Total</div>
+        <div class="wrapper-data">
+            
+            <div id="gridContainer"></div>
+        </div>       
     </div>
 
     <div class="nav-bar">
@@ -25,7 +41,7 @@
         </button>
     </div>
 
-    <script src="../js/script.js"></script>
-    <script src="../components//navbar/nav-bar.js"></script>
+    <script src="numbers.js"></script>
+    <script src="../components/navbar/nav-bar.js"></script>
 </body>
 </html>

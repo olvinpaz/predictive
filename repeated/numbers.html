@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repeated Numbers</title>
+    <title>Predictive</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <div id="content">
-        <h2>Repeated Numbers</h2>
+        <h2>Repetidos</h2>
         <h3>Seleccione una opcion</h3>
-        <button id="buttonML" data-value="2" class="opt-button">M</button>
-        <button id="buttonTL" data-value="3" class="opt-button">T</button>
-        <button id="buttonNL" data-value="4" class="opt-button">N</button>
+        <div id="repeatControlButtons">
+            <button id="mlRepeatButton" data-value="" class="opt-button">M</button>
+            <button id="alRepeatButton" data-value="" class="opt-button">T</button>
+            <button id="nlRepeatButton" data-value="" class="opt-button">N</button>            
+        </div>
 
         <div class="date-picker-container">
             <label for="datePicker">Desde la fecha:</label>
             <input type="date" id="datePicker"> 
         </div>
         
-        <div id="repeatedNumbers">
+        <div id="totalNumbers">Total</div>
+        <div class="wrapper-data">
             <div id="gridContainer"></div>
         </div>
     </div>
@@ -39,7 +42,6 @@
     </div>
 
     <script src="repeated.js"></script>
-    <!--<script src="../js/script.js"></script>-->
-    <script src="../components//navbar/nav-bar.js"></script>
+    <script src="../components/navbar/nav-bar.js"></script>
 </body>
 </html>

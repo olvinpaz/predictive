@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
     // Cuando el documento se carga completamente, se ejecutará este código.
     mlButton.classList.add("selected");
     alButton.classList.remove("selected");
-    nlButton.classList.remove("selected");
+    nlButton.classList.remove("selected");  
 
     // Añade la propiedad data-value="" pare definir el index de cada columna en la que se buscaran los datos de la fuente.
     // Column Index: "2" for Column ML, "3" for Column AL, "4" for Column NL from data src.
